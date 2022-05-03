@@ -116,7 +116,7 @@ void loadResource()
 			length--;
 		}
 	}
-	loadimage(&img, "1.jpg", 800, 800);
+	loadimage(&img, "3", 800, 800);
 	loadimage(&blank, "blank.jpg", 200, 200);
 
 }//初始化资源
@@ -153,9 +153,10 @@ void drawMap()
 			case 12:
 			case 13:
 			case 14:
+				putimage(x, y, 200, 200, &img, (array2D[i][j] - 12) * 200, 600);
 				break;
 			case 15:
-				putimage(x, y, 200, 200, &img, (array2D[i][j] - 12) * 200, 600);				
+				putimage(x, y,  &blank);				
 				break;
 			}
 		}
